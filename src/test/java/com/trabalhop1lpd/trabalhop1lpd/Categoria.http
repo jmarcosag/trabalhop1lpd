@@ -1,0 +1,22 @@
+GET http://localhost:8080/categoria/1
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/categoria/1/conteudo?nome=finalspace
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/categoria/1/produto?nome=finalspace
+Accept: application/json
+
+###
+
+
+GET http://localhost:8080/categoria/1/
+Accept: application/json
+
+###

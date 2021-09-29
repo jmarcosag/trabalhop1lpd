@@ -1,0 +1,61 @@
+POST http://localhost:8080/conteudo
+Content-Type: application/json
+
+{
+  "id": 2,
+  "nome": "filme",
+  "descricao": "filmefilme",
+  "fotoUrl": "https://static.wikia.nocookie.net/final-space/images/d/d6/Final_Space_Netflix.jpg/revision/latest/top-crop/width/360/height/450?cb=20190116121424&path-prefix=pt-br",
+  "dataCadastro": "2021-07-18",
+  "id_estudio": 1
+}
+
+###
+
+GET http://localhost:8080/conteudo?nome=filme
+Accept: application/json
+
+###
+
+POST http://localhost:8080/conteudo
+Content-Type: application/json
+
+{
+  "id": 3,
+  "nome": "filmefilme",
+  "descricao": "filmefilme",
+  "fotoUrl": "https://static.wikia.nocookie.net/final-space/images/d/d6/Final_Space_Netflix.jpg/revision/latest/top-crop/width/360/height/450?cb=20190116121424&path-prefix=pt-br",
+  "dataCadastro": "2021-07-18",
+  "id_estudio": 1
+}
+
+###
+
+GET http://localhost:8080/conteudo?nome=filmefilme
+Accept: application/json
+
+###
+
+POST http://localhost:8080/conteudo
+Content-Type: application/json
+
+{
+  "id": 4,
+  "nome": "serie",
+  "descricao": "filmefilme",
+  "fotoUrl": "https://static.wikia.nocookie.net/final-space/images/d/d6/Final_Space_Netflix.jpg/revision/latest/top-crop/width/360/height/450?cb=20190116121424&path-prefix=pt-br",
+  "dataCadastro": "2021-07-18",
+  "id_estudio": 1
+}
+
+###
+
+GET http://localhost:8080/conteudo?nome=serie
+Accept: application/json
+
+###
+
+GET http://localhost:8080/conteudo/1
+Accept: application/json
+
+###
