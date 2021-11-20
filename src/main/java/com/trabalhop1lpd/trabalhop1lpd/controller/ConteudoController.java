@@ -17,21 +17,31 @@ public class ConteudoController {
         produtoRepository = new ConteudoRepository(jdbcTemplate);
     }
 
+    @CrossOrigin("*")
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public Conteudo cadastrar(@RequestBody Conteudo produto) throws Exception {
         return produtoRepository.cadastrar(produto);
     }
 
+    @CrossOrigin("*")
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
     public List<Conteudo> buscar(@PathVariable Integer id) throws Exception {
         return produtoRepository.buscar(id);
     }
 
+    @CrossOrigin("*")
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping()
+    @GetMapping("/busca-nome")
     public List<Conteudo> buscarPorNome(@RequestParam(required = false) String nome) {
         return produtoRepository.buscarPorNome(nome);
+    }
+
+    @CrossOrigin("*")
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping()
+    public List<Conteudo> buscarConteudos() throws Exception {
+        return produtoRepository.buscarConteudos();
     }
 }

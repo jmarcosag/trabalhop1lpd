@@ -18,12 +18,14 @@ public class CategoriaController {
         categoriaRepository = new CategoriaRepository(jdbcTemplate);
     }
 
+    @CrossOrigin("*")
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
     public List<Categoria> buscar(@PathVariable Integer id) throws Exception {
         return categoriaRepository.buscar(id);
     }
 
+    @CrossOrigin("*")
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}/produto")
     public List<Conteudo> buscarConteudoPorNome(@PathVariable int id, @RequestParam(required = false) String nome) {

@@ -46,4 +46,14 @@ public class ConteudoRepository {
         }
         return null;
     }
+
+    public List<Conteudo> buscarConteudos() throws Exception {
+        String sql = "SELECT * FROM CONTEUDO";
+        List<Conteudo> search = (List<Conteudo>) jdbcTemplate.query(sql, new ConteudoMapper());
+
+        if (search.size() > 0) {
+            return (List<Conteudo>) jdbcTemplate.query(sql, new Object[]{}, new ConteudoMapper());
+        }
+        throw new Exception("Conteúdo não encontrado");
+    }
 }
